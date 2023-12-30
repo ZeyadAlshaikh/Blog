@@ -5,7 +5,7 @@ Building a blog website using Django can be a rewarding experience. Django is a 
 
 ## Step 1: Install python on your machine
 Make sure that you have installed python correctly on your machine. You can test it by running the following command.
-```shell
+```bash
 $ python -V
 # you should see somthing like this
 $ Python 3.8.10
