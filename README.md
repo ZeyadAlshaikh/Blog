@@ -146,7 +146,7 @@ We will use bootstrap template to save us time. You can download the template fr
     <main>
 
         <section class="py-5 text-center container">
-            <div class="row py-lg-5">
+            <div class="row">
                 <div class="col-lg-6 col-md-8 mx-auto">
                     <h1 class="fw-light">Elevating Web Development: A Journey Through Django's Framework Wonders </h1>
 
