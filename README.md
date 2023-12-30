@@ -76,7 +76,7 @@ To create a superuser for the admin interface run the following command and foll
 ```bash
 $ python manage.py createsuperuser
 ```
-## Step 7: Designing the Database
+## Step 7: Creating your models
 Next, design the database schema for your blog website. Think about the models you'll need, such as a model for blog posts, categories, and user comments. Use Django's ORM (Object-Relational Mapping) to define your models and their relationships.
 
 Open the **`models.py`** file located in your project directory (**`blog_project/blog/models.py`**).
