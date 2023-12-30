@@ -2,7 +2,7 @@
 
 # Django Blog website Guide
 Building a blog website using Django can be a rewarding experience. Django is a powerful web framework that allows developers to create dynamic and feature-rich websites. In this guide, we will walk you through the process of building your own Django blog website.
-
+$${\color{red}Red}$$
 ## Step 1: Install python on your machine
 Make sure that you have installed python correctly on your machine. You can test it by running the following command.
 ```bash
