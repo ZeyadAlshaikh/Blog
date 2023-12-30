@@ -12,18 +12,18 @@ $ Python 3.8.10
 ```
 
 ## Step 2: Create virtual environment ( best practice )
-```
+```bash
 $ python -m venv venv
 ```
 You might need to active your environment if not activated automatically by typing the following command.
 
 For mac and linux users
-```
+```bash
 $ source venv/bin/activate
 ```
 
 For windows users
-```
+```bash
 #for command prompt
 $ .\venv\Scripts\activate
 # for powershell
@@ -32,14 +32,14 @@ $ .\venv\Scripts\Activate.ps1
 
 ## Step 3: Installing Django
 Before getting started, make sure you have installed Django on your virtual environment. You can install Django using pip, the Python package manager. 
-```
+```bash
 $ pip install django
 ```
 
 
 ## Step 4: Creating your project
 Once Django is installed, create a new Django project and test it.
-```
+```bash
 $ django-admin startproject blog_project
 $ cd blog_project
 $ python mange.py runserver
@@ -49,7 +49,7 @@ Click on the link (http://127.0.0.1:8000/) to open your project. if you see the 
 
 ## Step 5: Creating blog app
 Now, you can stop the server by (press Ctrl+C in the terminal) . Run the following command to create the blog app.
-```
+```bash
 $ python manage.py startapp blog
 ```
 ## Step 6: Some configuration steps
@@ -62,13 +62,13 @@ INSTALLED_APPS = [
 ]
 ```
 ### Apply migrations:
-```
+```bash
 $ python manage.py migrate
 ```
 
 ### Create a Superuser to access admin page:
 To create a superuser for the admin interface run the following command and follow the prompts.
-```
+```bash
 $ python manage.py createsuperuser
 ```
 ## Step 7: Designing the Database
@@ -86,7 +86,7 @@ class Post(models.Model):
         return self.title
 ```
 Apply your changes to the database by running the following commands:
-```
+```bash
 $ python manage.py makemigrations
 $ python manage.py migrate
 ```
