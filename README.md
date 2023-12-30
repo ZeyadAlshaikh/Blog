@@ -60,6 +60,11 @@ INSTALLED_APPS = [
 # ...
 'blog',
 ]
+
+# add this to static
+import os
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 ```
 ### Apply migrations:
 ```bash
@@ -81,6 +86,7 @@ class Post(models.Model):
 
     title = models.CharField(verbose_name="title", max_length=50)
     body = models.TextField(verbose_name="body", max_length=500)
+    image = models.FileField("image", upload_to="", max_length=100)
 		
 		def __str__(self):
         return self.title
@@ -93,7 +99,8 @@ $ python manage.py migrate
 
 ## Step 8: Creating Views and Templates
 In this step, you'll create views and templates for your blog website. Views handle the logic behind each page, and templates define how the pages should be rendered. Use Django's built-in template language to create dynamic and interactive web pages.
-Create folder templates in your app directory (blog_project/blog/tempaltes/) to add all .HTML pages. 
+Create folder templates in your app directory (blog_project/blog/tempaltes/) to add all .HTML pages.
+Create folder templates in your root directory to save all images.
 
 Open the settings.py file located in your project directory (blog_project/settings.py). Locate the TEMPLATES section and add  import os before it. Then change the following:
 
@@ -156,6 +163,7 @@ We will use bootstrap template to save us time. You can download the template fr
                     <div class="col">
                         <div class="card shadow-sm">
                             <div class="card-header">
+				<img src="{%static post.image %}" height="200px" width="350px" class="img-thumbnail">
                                 <h4>{{post.title}}</h4>
                             </div>
 
@@ -234,6 +242,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.index),
 ]
+if settings.DEBUG:
+     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 ```
 ## Step 9: Testing
 Now we need to add posts and see how our website looks like. 
