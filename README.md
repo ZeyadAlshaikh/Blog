@@ -1,7 +1,7 @@
 ![Banner](https://github.com/ZeyadAlshaikh/Blog/assets/15981299/6980a4c9-ef6f-4c44-8b43-9b9faf359c56)
 
 # Django Blog website Guide
-Building a blog website using Django can be a rewarding experience. Django is a powerful web framework that allows developers to create dynamic and feature-rich websites. In this guide, we will walk you through the process of building your own Django blog  diff - website.
+Building a blog website using Django can be a rewarding experience. Django is a powerful web framework that allows developers to create dynamic and feature-rich websites. In this guide, we will walk you through the process of building your own Django blog #f03c15 website.
 
 ## Step 1: Install python on your machine
 Make sure that you have installed python correctly on your machine. You can test it by running the following command.
