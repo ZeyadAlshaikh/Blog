@@ -43,7 +43,7 @@ $ cd blog_project
 $ python mange.py runserver
 ```
 Click on the link (http://127.0.0.1:8000/) to open your project. if you see the image below, then congratulation, you have a running website. 
-(./DevServer.png)
+(/DevServer.png)
 ## Step 5: Creating blog app
 ## Step 6: Some configuration steps
 ### Apply migrations:
