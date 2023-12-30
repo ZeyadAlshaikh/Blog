@@ -163,7 +163,7 @@ We will use bootstrap template to save us time. You can download the template fr
                     <div class="col">
                         <div class="card shadow-sm">
                             <div class="card-header">
-				<img src="{%static post.image %}" height="200px" width="350px" class="img-thumbnail">
+				<img src="{{post.image.url }}" height="200px" width="350px" class="img-thumbnail">
                                 <h4>{{post.title}}</h4>
                             </div>
 
