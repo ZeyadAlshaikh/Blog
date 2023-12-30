@@ -1,3 +1,5 @@
+![Banner](https://github.com/ZeyadAlshaikh/Blog/assets/15981299/6980a4c9-ef6f-4c44-8b43-9b9faf359c56)
+
 # Django Blog website Guide
 Building a blog website using Django can be a rewarding experience. Django is a powerful web framework that allows developers to create dynamic and feature-rich websites. In this guide, we will walk you through the process of building your own Django blog website.
 
@@ -245,5 +247,5 @@ from .models import Post
 
 admin.site.register(Post)
 ```
-Now, add new posts and check the index page. You should see the result of newly added posts.
+Now, refresh your page and add new posts and check the index page. You should see the result of newly added posts.
 ### Thank You!
