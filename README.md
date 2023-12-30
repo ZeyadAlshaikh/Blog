@@ -55,7 +55,7 @@ $ python manage.py startapp blog
 ## Step 6: Some configuration steps
 ### Add the App to Your Project:
 Open the settings.py file located in your project directory (blog_project/settings.py). Locate the INSTALLED_APPS section and add the name of your new app to the list.
-```
+```python
 INSTALLED_APPS = [
 # ...
 'blog',
@@ -76,7 +76,7 @@ Next, design the database schema for your blog website. Think about the models y
 
 Open the **`models.py`** file located in your project directory (**`blog_project/blog/models.py`**).
 
-```
+```python
 class Post(models.Model):
 
     title = models.CharField(verbose_name="title", max_length=50)
@@ -97,7 +97,7 @@ Create folder templates in your app directory (blog_project/blog/tempaltes/) to 
 
 Open the settings.py file located in your project directory (blog_project/settings.py). Locate the TEMPLATES section and add  import os before it. Then change the following:
 
-```
+```python
 'DIRS': [os.path.join(BASE_DIR, 'templates')],
 ```
 Now, all .HTML files will be served from this folder. 
@@ -107,7 +107,7 @@ Create index.html page to be the landing page for your website. Add the followin
 We will use bootstrap template to save us time. You can download the template from: (https://getbootstrap.com/docs/5.0/examples/album/) with some modifications
 
 ### ndex.html
-```
+```HTML
 <!doctype html>
 <html lang="en">
 
@@ -213,7 +213,7 @@ We will use bootstrap template to save us time. You can download the template fr
 ### Creating view to serve your index page
 Open the views.py file located in your project directory (blog_project/blog/views.py).  and add the following.
 
-```
+```python
 from django.shortcuts import render
 from .models import Post
 # Create your views here.
@@ -225,7 +225,7 @@ def index(request):
 
 ### Adding URL to serve the index
 Open the urls.py file located in your project directory (blog_project/).  and add the following.
-```
+```python
 from django.contrib import admin
 from django.urls import path
 from blog import views
@@ -240,7 +240,7 @@ Now we need to add posts and see how our website looks like.
 Access the admin page from this URL: (http://localhost:8000/admin/) and login with the created superuser credentials.  You will not see the post table because we did not add it to the admin. Thus, we will add it now. 
 
 Open the admin.py file located in your project directory (blog_project/blog) and add the following.
-```
+```python
 from django.contrib import admin
 from .models import Post
 # Register your models here.
